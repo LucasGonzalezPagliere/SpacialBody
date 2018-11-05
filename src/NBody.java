@@ -5,16 +5,17 @@ import java.util.Scanner;
 public class NBody {
 	
 	public static void main(String[] args){
-		double totalTime = 1000000.0;
+		double totalTime = 10000000.0;
 		double dt = 25000.0;
-		String pfile = "data/Planets.txt";
+		String pfile = "data/planets.txt";
+		
 		if (args.length > 2) {
 			totalTime = Double.parseDouble(args[0]);
 			dt = Double.parseDouble(args[1]);
 			pfile = args[2];
 		}
 		
-		String fname= "./data/Planets.txt";
+		String fname= "./data/planets.txt";
 		Planet[] planets = readPlanets(fname);
 		double radius = readRadius(fname);
 		
